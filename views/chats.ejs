@@ -1,0 +1,97 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Chat</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/brands.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <!-- <link rel="icon" href="./font/flaticon.css"> -->
+    <link rel="stylesheet" href="styles.css">
+    
+   
+    <script> 
+        const roomVal = "<%= roomName %>";
+    </script>
+     <script  src="/socket.io/socket.io.js" defer></script>
+     <script  src="source.js"  defer ></script>
+     
+</head>
+<body>
+    <!-- <h3 class="text-center text-white mt-2 ">Textify</h3> -->
+    <div class="container">
+    <div class="jumbotron ">
+       <p class="border-start border-white ps-3 mb-0 ">Teleporters
+        <i class="far fa-handshake " id="iconHand"></i>
+       </p> 
+       <span class="d-block mt-0 tag">Lets take you out of the world</span>
+    </div>
+    
+    <div class="w-50 m-auto">
+    <form class="needs-validation" novalidate >
+        <label for="userVal" class="form-label ms-1 text-white fs-5">Username</label>
+        <input  type="text" class="form-control" placeholder="enter user name" id="userVal" name="username" required>
+        <div class="valid-feedback">
+            Looks good!
+          </div>
+          <div class="invalid-feedback">
+            Please choose a username
+          </div>
+        <button class="btn  w-100 mt-3" id="sub">Submit</button>
+       
+    </form>
+    </div>
+    </div>
+    <div class="row mt-1 ms-2 w-100" id = "setHeight">
+        
+            <div class="col-sm-3 ps-0 pe-0 " >
+                <div class=" intro dNone  pe-3 ">
+                    <span class="ms-3 pt-1 fs-4 text-white " >Lets' Meet</span>
+                    <!-- <div class="d-flex justify-content-center"> -->
+                    <span class="material-icons" id="screen">screen_share</span>
+                    <i class="fas fa-video pt-2 fs-4 mb-1" id="vidIcon"></i>
+                <!-- </div> -->
+                </div>
+                <div class="chat dNone">
+                    <!-- <div class="intro d-flex flex-row justify-content-between pe-4">
+                        <span class="ms-5 pt-1 fs-5">Yasir</span>
+                        <i class="fas fa-video pt-2 mb-1" id="vidIcon"></i>
+
+                    </div> -->
+                    <div class="received  ps-1"> 
+                        <div class=" received-text bg-transparent" ><span class="d-block pb-1 " id="userIntro"></span></div> 
+                    </div>
+                    <div class="sent ">
+                        <div class="sent-text bg-transparent dNone"></div>
+                    </div>
+                </div>
+                <div class="text-white " id="typing"></div>
+                 <div class="inp dNone">
+                  <input type="text" class="form-control text-break text-muted" id="bottom" placeholder="Enter Message here...">
+                  <i class="material-icons" id="send">send</i>
+                <!-- <button id="send">send</button>    -->
+                </div>
+            </div> 
+            <div class="col-sm-1 pe-0"></div>
+            <div class="col-sm-8 pe-0 dNone " id="bdr">
+                <div class="myVidiv dNone">
+                    <video src="" id="myVideo" autoplay></video>
+                    
+                </div>
+                <!-- <button class="btn-close-white" id="screen">Screen</button> -->
+               
+                <div class="mySecdiv dNone">
+                    <video src="" id="secVideo" autoplay></video>
+                </div>    
+            </div> 
+    
+    </div>
+
+    
+   
+</body>
+</html>

@@ -1,0 +1,276 @@
+
+    /* overflow-x: hidden;
+} */
+html{
+    width:100%;
+    height: 100%;
+}
+
+ body{
+     
+     background-repeat: no-repeat;
+     background-size: contain;
+     background-size: cover;
+    /* background: linear-gradient(   ); */
+    font-family: 'Markazi Text', serif;
+    overflow-x: hidden;
+    /* background-color: darkslategray;  */
+    background-color: black;
+ }
+
+ /* #contain {
+     background-color: darkslategray;
+     height: 85vh;
+     box-sizing: border-box;
+     border-radius: 10px;
+ } */
+
+
+.jumbotron {
+    padding: 3.5rem 2rem;
+    margin-bottom: 2rem;
+    margin-top: 1.5rem;
+    background-image: url("./metaImage.jpg"); 
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    /* background-position: left; */
+    /* background-color: #D5D6B8; */
+    box-sizing: border-box;
+    border-radius: .3rem;  
+    font-family: 'Play', sans-serif;
+    font-size: 4rem;
+    font-weight: 600;
+    color: whitesmoke;
+    letter-spacing: 4px;
+}
+
+#iconHand {
+    position: relative;
+    bottom: 26px;
+    font-size: 2rem;
+}
+
+.chat{
+    width: 100%;
+    height: 85%; 
+    /* background-color: #0f0f0f; */
+    background-image: url("./whatsbg1.jpg");
+    padding-left: 0;
+    background-size: cover;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    position: relative;
+    /* display: none; */
+
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #0f0f0f;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: white;
+}
+
+.intro {
+    /* background-color: #7D9EA7; */
+    background-color:  currentColor;
+    width: 100%;
+    opacity: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 8px;
+}
+
+#vidIcon {
+    font-size: 23px;
+    color: white;
+    cursor: pointer;
+}
+
+.received-text {
+    /* background-color: green; */
+    word-wrap: break-word;
+    font-family:  'Markazi Text', serif;
+   max-width:  70%;
+    background-color: #e0e0e0;
+    background-color: #C1C0C6;
+    margin-top: 15px;
+    padding: 8px;
+    /* border-radius: 0% 15% 15% 0% ; */
+    border-radius: 15px 15px 15px 0px;
+    margin-left: 5px;
+
+   
+}
+
+
+
+.sent-text {
+    /* background-color: 	#6699CC; */
+    /* background-color: #7D9EA7; */
+    background-color: lightgreen;
+    font-family: 'Markazi Text', serif;
+    word-wrap: break-word;
+    margin-left: auto;
+   max-width: 70%;
+    margin-top: 15px;
+    padding : 8px;
+    /* border-radius: 15% 0% 0% 15%; */
+    border-radius: 15px 15px 0px 15px;
+    text-align: left;
+    margin-right: 6px;
+    
+}
+
+ 
+#typing {
+    position: absolute;
+    top: 85%;
+    padding-left: 8px;
+}
+
+.inp {
+    width: 100%;
+    height: fit-content;
+    border-top: 1px  solid white;
+    /* background-color:#F9F8FF ; 
+    background-color: #7D9EA7; */
+    background-color: #0f0f0f;
+    opacity: 1;
+    /* background-color: #e8e8e8; */
+    display: flex;
+    justify-content:space-evenly;
+    /* display: none; */
+}
+
+#bottom {
+    max-width: 80%;
+    border-radius:20px 20px 20px 20px; 
+    word-wrap: break-word;
+    color: white;
+    /* background-color: #e8e8e2; */
+    background-color: transparent;
+    outline: none;
+    border: none;
+    margin-top: 0;
+    padding: 0;
+    padding-left: 4px;
+    padding-top: 7px;
+}
+
+#bottom::placeholder{
+    /* color: white; */
+    letter-spacing: 1px;
+}
+
+#send {
+    color: white;
+    cursor: pointer;
+    padding-top: 5px;
+
+}
+
+#icon {
+    color: white;
+    display: inline;
+    height: 30px;
+    width: 30px;
+    background-color: black;
+}
+
+.myVidiv {
+    width: 90%;
+    height: 60%;
+    background-color:transparent;
+    margin-left: 20px;
+    margin-right: 20px;
+    /* display: none; */
+}
+
+#myVideo {
+    max-height: 100%;
+     width: 100%; 
+    max-width: 100%;
+    margin-left : 5%;
+    border: white 1px solid;
+}
+#secVideo {
+    width: 60%;
+    margin-left : 20%;
+    margin-top: 8px;
+    border: whitesmoke 1px solid ;
+    /* display: none;  */
+}
+
+#bdr {
+    border-left: 2px solid white;
+}
+
+.dNone {
+    display: none;
+}
+
+.tag {
+    font-size: 20px;
+    padding-left: 25px;
+    color:darkgray;
+}
+
+#joinButton, #sub {
+/* background-color: white; */
+color: white;
+border: 2px lightblue solid;
+transition: 300ms transform 100ms;
+letter-spacing: 2px;
+}
+
+#joinButton:hover,#sub:hover {
+    transform: scale(1.07);
+}
+
+#vidIcon {
+    color: white;
+    transition: 300ms transform 100ms;
+}
+
+#vidIcon:hover {
+    transform: scale(1.2);
+}
+
+#screen {
+    font-size : 30px;
+    color: white;
+    margin-left: 120px;
+    margin-top: 5px;
+    cursor: pointer;
+    transition: 300ms transform 100ms;
+}
+#screen:hover{
+    transform: scale(1.2);
+}
+
+#errColor {
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: maroon;
+}
+
+#setHeight {
+    height :100vh;
+}
+
+@media screen and (max-width: 900px) {
+    
+    #secVideo {
+        margin-top: 10px;
+    }
+
+}
